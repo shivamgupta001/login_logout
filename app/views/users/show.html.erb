@@ -1,0 +1,5 @@
+
+<%=link_to :sign_out , session_path(@user) , :method => :delete %>
+<br/>
+Email:<%=@user.email%><br>
+Password:<%=@user.password%>
