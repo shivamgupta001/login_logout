@@ -1,14 +1,25 @@
-
-<%=form_for @user do |f|%>
-<div class="field">
-<%=f.label :email%><br/>
-<%=f.text_field :email%>
-</div>
-<div class="field">
-<%=f.label :password%><br/>
-<%=f.password_field :password%>
-</div>
-<div class="actions">
-<%=f.submit%>
-</div>
+<div id="out">
+  <div class="head">
+    <h4>Register</h4>
+  </div>
+  
+<%=form_for @user ,:html=>{:onsubmit=>"return validate(this.user_email,this.user_password);",:name=>"myForm"} do |f|%>
+  <div class="field">
+     <span class="b1">    
+      <%=f.label :email%><span style="color:red;">*</span>
+     </span>
+    <%=f.text_field :email, :class=> "t1",:size=>"20" %>
+  </div>
+  <div class="field">
+      <span>
+      <%=f.label :password%><span style="color:red;">*</span>
+      </span>
+      <%=f.password_field :password,:class=> "t1" ,:size=>"20" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Sign up',:class=>"t2"%>
+    <%= link_to "Sign in" ,new_session_path%>
+  </div>
 <%end%>
+</div>
+

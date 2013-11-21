@@ -1,21 +1,6 @@
-<html>
-<head>
-<script type="text/javascript">
-function validate()
-{var  email=document.getElementById(new_user);
- var  password=document.getElementById(new_user);
-     if(email==''||password=='')
-      { alert("field cannot be empty");
-        return false;
-      }
-}
-</script>
-</head>
-<body>
-<h1>Sign Up</h1>
+
 <%=render 'form'%>
 <% if @user.errors.present? %>
 <%=@user.errors.full_messages%>
 <% end %>
-</body>
-</html>
+

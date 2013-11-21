@@ -1,3 +1,37 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#out{   position :fixed;
+        left :400px;
+        top:220px;
+         
+        border :2px solid;  
+        height :auto;
+        width :350px;
+        font-family:"Times New Roman", Times, serif;
+    }
+ .t1{margin-left:5px;
+     margin-top: 10px;
+padding:2px 8px;
+  }
+.head{ border:1px solid gray;
+       background-color:gray;
+       color :white;
+      }
+h5.head{color :white;}
+.field{ 
+        background-color: lightgray;
+         color :blue;
+      }
+.actions{   padding: 5px 80px;
+            background-color: lightgray;
+            
+                  
+        }
+.t2{ background-color:blue;
+     color:white;
+    
+  }
+.b1{margin-right: 22px;}
+span{margin-left:2px;}

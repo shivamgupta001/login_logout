@@ -1,14 +1,25 @@
-<h1>Login</h1>
-<%=form_tag session_path do %>
+<div id="out">
+  <div class="head">
+    <h4>Sign in</h4>
+  </div>
+  
+<%=form_tag session_path ,:name=>"myForm",:onsubmit=>"return validate(this.email,this.password);" do %>
   <div class="field">
-    <%=label_tag :email %><br/>
-    <%=text_field_tag :email %>
+   <span class="b1">    
+    <%=label_tag :email%><span style="color:red;">*</span>
+   </span>
+    <%=text_field_tag :email,"", :class=> "t1" %>
   </div>
   <div class="field">
-    <%=label_tag :password %><br/>
-    <%=password_field_tag :password %>
+    <span>
+    <%=label_tag :password%><span style="color:red;">*</span>
+    </span>
+    <%=password_field_tag :password,"",:class=> "t1"  %>
   </div>
   <div class="actions">
-    <%= submit_tag 'Login'%>
+    <%= submit_tag 'Submit',:class=>"t2"%>
+    <%= link_to :register , new_user_path%>
   </div>
 <%end%>
+</div>
+

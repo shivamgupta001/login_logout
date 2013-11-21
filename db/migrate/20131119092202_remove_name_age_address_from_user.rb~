@@ -1,5 +1,0 @@
-class RemoveNameAgeAddressFromUser < ActiveRecord::Migration
-  def change
-      remove_column :user :name , :age , :address
-  end
-end
